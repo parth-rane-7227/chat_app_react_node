@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/solid.min.js"
+                integrity="sha512-apZ8JDL5kA1iqvafDdTymV4FWUlJd8022mh46oEMMd/LokNx9uVAzhHk5gRll+JBE6h0alB2Upd3m+ZDAofbaQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+                integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat App</title>
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+        <div id="index"></div>
+        <section class="chat__section">
+                <div class="brand">
+                        <img height="40" src="/logo.png" alt="">
+                        <h1 style="text-decoration: none;">Parth's Chat App</h1>
+                </div>
+                <div class="message__area"></div>
+                <div style="padding: 15px;">
+                        <button style="padding: 10px;" id="bold" class="btn btn-light active bolda"
+                                onclick="makeBold(this)"><i class="fa fa-bold"></i></button>
+                        <button style="padding: 10px;" id="italic" class="btn btn-light active bolda"
+                                onclick="makeItalic(this)"><i class="fa fa-italic"></i></button>
+                        <button style="padding: 10px;" id="strikethrough" class="btn btn-light active bolda"
+                                onclick="makeStrike(this)"><i class="fa fa-strikethrough"></i></button>
+                        <button style="padding: 10px;" id="link" class="btn btn-light active bolda"
+                                onclick="makeLink(this)"><i class="fa fa-link"></i></button>
+                        <button style="padding: 10px;" id="listul" class="btn btn-light active bolda"
+                                onclick="makeUl(this)"><i class="fa fa-list-ul"></i></button>
+                        <button style="padding: 10px;" id="listol" class="btn btn-light active bolda"
+                                onclick="makeOl(this)"><i class="fa fa-list-ol"></i></button>
+                        <button style="padding: 10px;" id="quoteleft" class="btn btn-light active bolda"
+                                onclick="makeQuote(this)"><i class="fa-solid fa-quote-left"></i></button>
+                        <button style="padding: 10px;" id="code" class="btn btn-light active bolda"
+                                onclick="makeCode(this)"><i class="fa fa-code "></i></button>
+                        <button style="padding: 10px;" id="plus" class="btn btn-light active bolda"
+                                onclick="makeUpload(this)"><i class="fa fa-plus"></i></button>
+                        <button style="padding: 10px;" id="at" class="btn btn-light active bolda"
+                                onclick="mentionUser(this)"><i class="fa fa-at"></i></button>
+                        <button style="padding: 10px;" id="emoji" class="btn btn-light active bolda"
+                                onclick="makeEmoji(this)"><i class="fa fa-smile-o"></i></button>
+
+
+                        <div id="emoji-picker" class="hidden">
+                                <div id="emoji-container"></div>
+                        </div>
+                        <button id="emoji-button"></button>
+
+                </div>
+                <div>
+                        <input class="inputText" style="padding: 10px;" id="textarea" cols="30" rows="1"
+                                placeholder="Write a message" />
+                </div>
+        </section>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/client.js"></script>
+</body>
+
+</html>
